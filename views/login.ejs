@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include ("../views/coman/css.ejs")%>
+    <title>Document</title>
+</head>
+<body>
+    <%-include ("../views/coman/navbar.ejs")%>
+  
+               
+          <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="" placeholder="Enter Your Email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="" placeholder="Enter Your Password">
+                </div>
+               
+                <div class="form-group">
+                    <input type="submit" name="submit" id="">
+                </div>
+               
+               
+            </form>
+        </div>
+
+    </section>
+
+               
+         
+    <%-include ("../views/coman/services.ejs")%>
+
+
+    <%-include ("../views/coman/client.ejs")%>
+
+    <%-include ("../views/coman/footer.ejs")%>
+
+
+</body>
+</html>

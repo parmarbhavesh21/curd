@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include ("../views/coman/css.ejs")%>
+    <title>Document</title>
+</head>
+<body>
+    <%-include ("../views/coman/navbar.ejs")%>
+
+
+ <% if(details != null){ %>
+<table class="table ">
+    <tr class="user">
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>User Email</th>
+        <th>User Number</th>
+        <th>User Password</th>
+        <th>User Delete</th>
+        <th>User UpDate</th>
+
+
+    </tr>
+<% details.forEach((item)=>{%>
+
+    <tr class="userdata">
+        <td><%=item._id %></td>
+        <td><%=item.name %></td>
+        <td><%=item.email %></td>
+        <td><%=item.number %></td>
+        <td><%=item.password %></td>
+        <td> <a href="/delete/<%=item._id %>"> Delete</a> </td>
+        <td> <a href="/update/<%=item._id %>"> Edit</a> </td>
+
+
+    </tr>
+
+<%})%>
+</table>
+
+ <% } %>
+
+
+ <%-include ("../views/coman/services.ejs")%>
+
+
+ <%-include ("../views/coman/client.ejs")%>
+
+
+    <%-include ("../views/coman/footer.ejs")%>
+
+  
+
+</body>
+</html>
